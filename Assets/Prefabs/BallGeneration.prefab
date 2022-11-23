@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2057817758870643327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057817758870643324}
+  - component: {fileID: 2057817758870643314}
+  - component: {fileID: 114033864020137712}
+  m_Layer: 0
+  m_Name: BallGeneration
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2057817758870643324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057817758870643327}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2057817758870643314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057817758870643327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567b903cf32b94b1795be42303c9ae58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Balls:
+  - {fileID: 6231030380561430218, guid: 6b012b338e90841d3b646673439bc184, type: 3}
+  - {fileID: 6572317364639071374, guid: 08b619cb79db043409bc6f506af27753, type: 3}
+  - {fileID: 7610508881024518290, guid: c219913000f2148eda83fc122a3e2224, type: 3}
+  - {fileID: 2795646430219780581, guid: 52e4f4123b30640d39ecda5c3a362f38, type: 3}
+  - {fileID: 2403761055336171122, guid: 5b8c5a4dc989e40ec9686659995a45c0, type: 3}
+  - {fileID: 2693095833466544337, guid: ed1a433fa1f554d7889078c0a8ded265, type: 3}
+--- !u!114 &114033864020137712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057817758870643327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ad2b4ca5a494cf6951bc38d8a34fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMultiplier: 0.6
+  scoreCount: 5
+  speedInput: 2
+  maxSpeedInput: 6

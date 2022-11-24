@@ -6,11 +6,9 @@ public class Rotation : MonoBehaviour
     public iTween.LoopType loopType;
     public iTween.EaseType easeType;
     private Vector3 originalRotation;
-    public static Scene currentScene;
 
     private void Start() {
-    currentScene=SceneManager.GetActiveScene();
-    // Debug.Log(currentScene.name);    
+        // Debug.Log(currentScene.name);    
     }
     
     void Update()
@@ -19,22 +17,24 @@ public class Rotation : MonoBehaviour
         //Rotation
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
                 Spin();
-                
         }   
     }
 
     void Spin(){
-            if(currentScene.name=="Scene_Easy")
+            if(GameManager.instance.level == GameManager.Level.Easy)
             {
                 iTween.RotateBy(this.gameObject,iTween.Hash("z",-.333333333333f,"time",.1f,"easetype",easeType,"looptype",loopType)); //Scene_Easy Code
+                Debug.Log("easy");
             }
-            if(currentScene.name=="Scene_Medium")
+            if(GameManager.instance.level == GameManager.Level.Normal)
             {
                 iTween.RotateBy(this.gameObject,iTween.Hash("z",-.25f,"time",.1f,"easetype",easeType,"looptype",loopType)); //Scene_Medium Code
+                Debug.Log("normal");
             }
-            if(currentScene.name=="Scene_Hard")
+            if(GameManager.instance.level == GameManager.Level.Hard)
             {
                 iTween.RotateBy(this.gameObject,iTween.Hash("z",-.1666666667f,"time",.1f,"easetype",easeType,"looptype",loopType)); //Scene_Medium Code
+                Debug.Log("hard");
             }
     }
 }

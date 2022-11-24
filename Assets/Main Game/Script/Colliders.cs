@@ -15,6 +15,7 @@ public class Colliders : MonoBehaviour
     private void Start() {
         screen=FindObjectOfType<ScreenManager>();
         collideAudio=GetComponentInParent<AudioSource>();
+        scorePoints = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

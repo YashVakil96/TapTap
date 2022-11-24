@@ -9,29 +9,31 @@ public class Scale : MonoBehaviour
     {
         screenRatio = (float)Screen.width / (float)Screen.height;
         stageRatio = (float)stage.transform.localScale.y / (float)stage.transform.localScale.x;
+        
+        SetStage();
     }
 
-    
-    void Update()
+    private void SetStage()
     {
-        if (Rotation.currentScene.name == "Scene_Easy")
+        if (GameManager.instance.level == GameManager.Level.Easy)
         {
-            screenRatio = (float)Screen.width / (float)Screen.height;
-            stageRatio = (float)stage.transform.localScale.y / (float)stage.transform.localScale.x;
+            screenRatio = (float) Screen.width / (float) Screen.height;
+            stageRatio = (float) stage.transform.localScale.y / (float) stage.transform.localScale.x;
             stage.transform.localScale = new Vector3(screenRatio * 1.7f, screenRatio * 1.7f);
         }
-        if (Rotation.currentScene.name == "Scene_Medium")
+
+        if (GameManager.instance.level == GameManager.Level.Normal)
         {
-            screenRatio = (float)Screen.width / (float)Screen.height;
-            stageRatio = (float)stage.transform.localScale.y / (float)stage.transform.localScale.x;
+            screenRatio = (float) Screen.width / (float) Screen.height;
+            stageRatio = (float) stage.transform.localScale.y / (float) stage.transform.localScale.x;
             stage.transform.localScale = new Vector3(screenRatio * 2.2f, screenRatio * 2.2f);
         }
-        if (Rotation.currentScene.name == "Scene_Hard")
+
+        if (GameManager.instance.level == GameManager.Level.Hard)
         {
-            screenRatio = (float)Screen.width / (float)Screen.height;
-            stageRatio = (float)stage.transform.localScale.y / (float)stage.transform.localScale.x;
+            screenRatio = (float) Screen.width / (float) Screen.height;
+            stageRatio = (float) stage.transform.localScale.y / (float) stage.transform.localScale.x;
             stage.transform.localScale = new Vector3(screenRatio * 2.0f, screenRatio * 2.0f);
         }
-        
     }
 }

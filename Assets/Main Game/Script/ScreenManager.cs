@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class ScreenManager : MonoBehaviour
 {
@@ -18,47 +20,35 @@ public class ScreenManager : MonoBehaviour
     private GameObject musicObject;
     private GameObject adPanel;
     private Button musicButton;
-    private Music musicControl;
+
+    public GameObject easy;
+    public GameObject normal;
+    public GameObject hard;
+
 
     private GameObject AdsButton;
     //private GooglaAds gads;
 
     private void Start()
     {
-        musicControl = GameObject.FindGameObjectWithTag("Audio").GetComponent<Music>();
+        Time.timeScale = 1f;
+        BallGenerator.isAlive = false;
         musicObject = GameObject.Find("musicButton");
         AdsButton = GameObject.Find("noAddsButtonOn");
-        musicButton = musicObject.GetComponent<Button>();
-    }
+        switch (GameManager.instance.level)
+        {
+            case GameManager.Level.Easy:
+                easy.SetActive(true);
+                break;
 
-    private void Update()
-    {
-        musicObject = GameObject.Find("musicButton");
-        musicButton = musicObject.GetComponent<Button>();
-    }
+            case GameManager.Level.Normal:
+                normal.SetActive(true);
+                break;
 
-    public void Easy()
-    {
-        SceneManager.LoadScene("Scene_Easy");
-        Colliders.scorePoints = 0;
-        Time.timeScale = 1f;
-        BallGenerator.isAlive = false;
-    }
-
-    public void Medium()
-    {
-        SceneManager.LoadScene("Scene_Medium");
-        Colliders.scorePoints = 0;
-        Time.timeScale = 1f;
-        BallGenerator.isAlive = false;
-    }
-
-    public void Hard()
-    {
-        SceneManager.LoadScene("Scene_Hard");
-        Colliders.scorePoints = 0;
-        Time.timeScale = 1f;
-        BallGenerator.isAlive = false;
+            case GameManager.Level.Hard:
+                hard.SetActive(true);
+                break;
+        }
     }
 
     public void checkMusic()
@@ -67,28 +57,21 @@ public class ScreenManager : MonoBehaviour
         musicButton = musicObject.GetComponent<Button>();
         if (HomeScreen.musicOn)
         {
-            musicControl.StopMusic();
+            Music.instance.StopMusic();
+
             HomeScreen.musicOn = false;
             Debug.Log(musicButton.image.sprite);
             musicButton.image.sprite = musicOffSprite;
         }
         else
         {
-            musicControl.PlayMusic();
+            Music.instance.PlayMusic();
             HomeScreen.musicOn = true;
             Debug.Log(musicButton.image.sprite);
 
             musicButton.image.sprite = musicOnSprite;
             // Debug.Log(musicOn);
         }
-    }
-
-
-    public void Difficulty_Screen()
-    {
-        SceneManager.LoadScene("Difficulty_Screen");
-        Time.timeScale = 1f;
-        popUpScreen = false;
     }
 
     public void DeadScreen()
@@ -145,7 +128,6 @@ public class ScreenManager : MonoBehaviour
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        adPanel.SetActive(true);
         popUpScreen = false;
         Debug.Log(popUpScreen);
     }
@@ -154,25 +136,6 @@ public class ScreenManager : MonoBehaviour
     {
         SceneManager.LoadScene("Home_Screen");
         Time.timeScale = 1f;
-    }
-
-    public void InfoScreen()
-    {
-        SceneManager.LoadScene("InfoScreen");
-        Time.timeScale = 1f;
-    }
-
-    public void closeInfo()
-    {
-        if (fromHome)
-        {
-            SceneManager.LoadScene("Home_Screen");
-            fromHome = false;
-        }
-        else
-        {
-            SceneManager.LoadScene("Difficulty_Screen");
-        }
     }
 
     public void Rating()

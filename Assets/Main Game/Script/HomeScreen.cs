@@ -68,6 +68,12 @@ public class HomeScreen : MonoBehaviour
 
         }
     }
+    
+    public void LoadLevel(int no)
+    {
+        GameManager.instance.level = (GameManager.Level) no;
+        SceneManager.LoadScene("Gameplay");
+    }
 
     public void Play()
     {

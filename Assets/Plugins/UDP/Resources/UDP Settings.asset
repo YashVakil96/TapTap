@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: -107981364, guid: 2c3078f85c1a94a82b179c36ee13484f, type: 3}
   m_Name: UDP Settings
   m_EditorClassIdentifier: 
-  UnityProjectID: 
-  UnityClientID: 
-  UnityClientKey: 
-  UnityClientRSAPublicKey: 
-  AppName: 
-  AppSlug: 
-  AppItemId: 
+  UnityProjectID: 80b8567b-75f9-4566-a56c-02cb52a46d76
+  UnityClientID: qUBLCtH5ajrHHh6lh9YALg
+  UnityClientKey: A2lYAQkJe4MEuod4VF1jxVyoWRwsSs6nbOJSzzWnohQ
+  UnityClientRSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAonLwqYpWBXcLI4N3IANkZrnCcd/v0mj7HMtCeOdZreMCVK9Ugd5lOFPT2/5gLAn5OSGQsjhILiPs7dhQJ2fTC2zx8F1aBvJz6KoRKjYI3iSqcTJKJrCv81ziMHlKuZuykx4DwO8GXXc/4hK3Jz35QsawylMM1Pbd9erXUnEwpzNPAhlHr3oEPncMperijHbyuevO6NvCtwEIGqBZvWoLJYE3A4ZpNbPHvFCp23Y8MVkcoprSzlKhbFsfRjeQLF7lTvcGtHo0/xjY79X61tlsdDLESSOnnumbr8nqjFRzwf7+5MLAx3gylRjzJqbZRcbBvOr1ua0y5ZLmiyPdwHP1PQIDAQAB
+  AppName: Tap Tap
+  AppSlug: 1df4283b-1801-474a-85da-770aa9e7964b
+  AppItemId: 637f1f929126e1aabd0b0c51
   Permission: 

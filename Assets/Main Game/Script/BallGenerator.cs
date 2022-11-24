@@ -30,7 +30,7 @@ public class BallGenerator : MonoBehaviour
 
         #region EasyCode
         //Easy
-        if (Rotation.currentScene.name == "Scene_Easy")
+        if (GameManager.instance.level == GameManager.Level.Easy)
         {
             ballsSize = Balls.GetLength(0) - 4;
             ballSelector = Random.Range(0, 3);
@@ -39,7 +39,7 @@ public class BallGenerator : MonoBehaviour
 
         #region MeduimCode
         //Medium
-        if (Rotation.currentScene.name == "Scene_Medium")
+        if (GameManager.instance.level == GameManager.Level.Normal)
         {
             ballsSize = Balls.GetLength(0) - 3;
             ballSelector = Random.Range(0, 4);
@@ -48,7 +48,7 @@ public class BallGenerator : MonoBehaviour
 
         #region HardCode
         //Hard
-        if (Rotation.currentScene.name == "Scene_Hard")
+        if (GameManager.instance.level == GameManager.Level.Hard)
         {
             ballsSize = Balls.GetLength(0) - 1;
             ballSelector = Random.Range(0, 6);

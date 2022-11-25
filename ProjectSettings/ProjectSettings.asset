@@ -3,7 +3,7 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 23
+  serializedVersion: 22
   productGUID: 7a0a9bd5bdbd745218d45693581665b1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
@@ -145,19 +145,17 @@ PlayerSettings:
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
-  enableOpenGLProfilerGPURecorders: 1
   useHDRDisplay: 0
   D3DHDRBitDepth: 0
   m_ColorGamuts: 00000000
   targetPixelDensity: 30
   resolutionScalingMode: 0
-  resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.Madhouse.taptap
     Standalone: com.Company.ProductName
-    iPhone: com.trossdesigns.tapatap
+    iPhone: com.Madhouse.tapatappy
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -166,7 +164,7 @@ PlayerSettings:
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 0
   iPhoneStrippingLevel: 0
@@ -220,7 +218,6 @@ PlayerSettings:
   iOSLaunchScreeniPadCustomStoryboardPath: 
   iOSDeviceRequirements: []
   iOSURLSchemes: []
-  macOSURLSchemes: []
   iOSBackgroundModes: 0
   iOSMetalForceHardShadows: 0
   metalEditorSupport: 1
@@ -470,7 +467,6 @@ PlayerSettings:
       m_Kind: 4
       m_SubKind: App Store
   m_BuildTargetBatching: []
-  m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
     m_GraphicsJobs: 0
@@ -519,8 +515,6 @@ PlayerSettings:
     m_APIs: 0b0000000800000015000000
     m_Automatic: 0
   m_BuildTargetVRSettings: []
-  m_DefaultShaderChunkSizeInMB: 16
-  m_DefaultShaderChunkCount: 0
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
@@ -532,7 +526,6 @@ PlayerSettings:
   m_BuildTargetGroupLightmapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetNormalMapEncoding: []
-  m_BuildTargetDefaultTextureCompressionFormat: []
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -551,7 +544,6 @@ PlayerSettings:
   switchScreenResolutionBehavior: 2
   switchUseCPUProfiler: 0
   switchUseGOLDLinker: 0
-  switchLTOSetting: 0
   switchApplicationID: 0x01004b9000490000
   switchNSODependencies: 
   switchTitleNames_0: 
@@ -780,10 +772,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: 
-    iPhone: CLOUDONCE_DEBUG
+    0: 
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -794,8 +784,8 @@ PlayerSettings:
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
+  useReferenceAssemblies: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 2
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -885,7 +875,6 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  windowsGamepadBackendHint: 0
   cloudProjectId: 80b8567b-75f9-4566-a56c-02cb52a46d76
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
@@ -893,6 +882,4 @@ PlayerSettings:
   organizationId: joker_yash96
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
-  playerDataPath: 
-  forceSRGBBlit: 1
   virtualTexturingSupportEnabled: 0

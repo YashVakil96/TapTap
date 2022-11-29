@@ -51,6 +51,11 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene("Gameplay");
+    }
+
     public void checkMusic()
     {
         musicObject = GameObject.Find("musicButton");
@@ -80,17 +85,18 @@ public class ScreenManager : MonoBehaviour
         Time.timeScale = 0f;
         if (HomeScreen.musicOn)
         {
-            DeadMenuUI.transform.GetChild(0).GetChild(5).GetComponent<Image>().sprite = musicOnSprite;
+            DeadMenuUI.transform.GetChild(0).GetChild(6).GetComponent<Image>().sprite = musicOnSprite;
         }
         else
         {
-            DeadMenuUI.transform.GetChild(0).GetChild(5).GetComponent<Image>().sprite = musicOffSprite;
+            DeadMenuUI.transform.GetChild(0).GetChild(6).GetComponent<Image>().sprite = musicOffSprite;
         }
 
         DeathCount++;
         if (DeathCount == 3)
         {
-            //show ad
+            DeathCount = 0;
+            Ads.instance.interstitialAd.ShowAd();
         }
 
         AdsButton = GameObject.Find("noAddsButtonOn");

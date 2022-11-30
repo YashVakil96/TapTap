@@ -34,11 +34,11 @@ public class Ads : MonoBehaviour
 
      async void Start()
     {
-        if (!UDP.removeads)
+        /*if (!UDP.removeads)
         {
             InitializeAds();
             await InitServices();
-        }
+        }*/
     }
 
     public void InitializeAds()

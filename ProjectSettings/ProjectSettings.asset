@@ -266,7 +266,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Unity/KEYSTORE/user.keystore
+  AndroidKeystoreName: '{inproject}: Assets/Main Game/Keystore/user.keystore'
   AndroidKeyaliasName: taptap
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0

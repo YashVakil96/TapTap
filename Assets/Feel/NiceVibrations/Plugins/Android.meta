@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Feel/NiceVibrations/Plugins/Android.meta
 guid: 9390e14b79696426d8527e368308b77c
+========
+guid: 2393cebd9fa9855448fbb233a7311b11
+>>>>>>>> 3c6b29f68a1c846e53b3ea6daabf82b1124344bb:Assets/Firebase.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

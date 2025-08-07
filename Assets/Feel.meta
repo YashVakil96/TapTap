@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Feel.meta
 guid: e5594e1e7ea598d409319855db3fd1f5
+========
+guid: c6a5d326cad513540890ecfaedc9ce1c
+>>>>>>>> 3c6b29f68a1c846e53b3ea6daabf82b1124344bb:Assets/MobileDependencyResolver/Editor/1.2.174.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
